@@ -1,0 +1,23 @@
+Based on this model and the associated probabilities, you decide to implement constriant-based A*. This algorithm includes a candidate generation routine that enumerates possible state assignments to your equipment in order of prior probability. 
+
+This algorithm is implemented below.
+
+
+def probability_queue(components, mode_probs):
+    '''components is a dictionary of the form:
+            components = {component_1: [modeA, modeB, ...],
+                          component_2: [modeA, modeB, ...],
+                          ...}
+       mode_probs is a dictionary of the form:
+            mode_probs = {component1: [P(modeA), P(modeB)...],
+                          component2: [P(modeA), P(modeB)...],
+                          ...}
+        
+        prob_ordered_dictionary is the output. The key is an index ordered by prior probability. The vlaues are 
+        a set where each element of that set is as complete mode assignment.
+        The first element of each set is the posterior probability of that assignment'''
+		
+		
+
+Now that you have your probability queue, you implment the rest of constraint-based A* by writing your tester. For each supplied candidate, this routine checks to see if the variable assignment satisfies the constraints derived from your propistional logic statements. If it does satisfy them, then it is retained as a candidate. If it does not, then you prune assignments of that form.
+
